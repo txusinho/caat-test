@@ -1,0 +1,55 @@
+<html>
+    <head></head>
+    <body>
+        <div id="test">
+            <canvas id="_c1" width="100" heigth="100"></canvas>
+        </div>
+
+
+
+        <div id="div_canvas2"></div>
+        <script type="text/javascript" src="../../vendor/libs/caat/caat2.js"></script>
+        <script>
+        // CAAT.DEBUG=true;
+            (function (){
+            var director = new CAAT.Director().initialize(
+                    100,    // 100 pixels wide
+                    100,    // 100 pixels across
+                    document.getElementById('_c1'));
+
+            var scene=     director.createScene();
+
+            var circle=    new CAAT.ShapeActor().
+                    setLocation(20,20).
+                    setSize(60,60).
+                    setFillStyle('#ff0000').
+                    setStrokeStyle('#000000');
+
+            scene.addChild(circle);
+
+            director.loop(1);
+        })();
+
+        (function() {
+            // We are not pointing any canvas in the director creation statement,
+            // so the director will create a Canvas for us.
+            var director2 = new CAAT.Director().initialize(100, 100);
+
+            // add the canvas to the document:
+            document.getElementById('div_canvas2').appendChild(director2.canvas);
+
+            var scene2 = director2.createScene();
+            var circle2 = new CAAT.ShapeActor().
+                    setLocation(20, 20).
+                    setSize(60, 60).
+                    setFillStyle('#ff00ff').
+                    setStrokeStyle('#00ff00');
+
+            scene2.addChild(circle2);
+
+            director2.loop(1);
+        })();
+
+        </script>
+    </body>
+</html>
