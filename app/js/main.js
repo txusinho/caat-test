@@ -1,6 +1,7 @@
 (function (){
+
     var director_1 = new CAAT.Director().initialize(
-            600,400,
+            1200,800,
             document.getElementById('_c1'));
 
     var scene_1=     director_1.createScene().setFillStyle('#fff');

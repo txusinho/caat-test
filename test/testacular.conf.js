@@ -3,14 +3,18 @@
 
 
 // base path, that will be used to resolve files and exclude
-basePath = '';
+basePath = '../';
 
 
 // list of files / patterns to load in the browser
 files = [
   JASMINE,
   JASMINE_ADAPTER,
-  'js/*.js test/**/*Spec.js'
+  'vendor/libs/caat/caat.js',
+  'app/js/ui.js',
+  'test/*Spec.js'//,
+
+  // 'js/*.js test/**/*Spec.js '
 ];
 
 
@@ -54,7 +58,7 @@ autoWatch = true;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['PhantomJS', 'Firefox'];
+browsers = ['PhantomJS', 'Firefox', 'Chrome'];
 
 
 // If browser does not capture in given timeout [ms], kill it
