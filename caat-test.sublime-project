@@ -1,0 +1,19 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"${project_path}/util/build.sh"
+			],
+			"name": "build_caat",
+			"selector": "source.js"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "/home/txus/projects/caat-test"
+		}
+	]
+}
